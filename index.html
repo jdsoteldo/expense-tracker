@@ -1,0 +1,57 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<h1 class="center-title">Where is my money going?</h1>
+<h2 class="center-title">Add a new expense:</h2>
+
+<div class="contents">
+  <div id="form-box">
+    <form id="form">
+      <div>
+        <span>Method:</span>
+          <select name="type" id="type">
+            <option value=""disabled selected>Transaction Type</option>
+            <option value="cash">Cash</option>
+            <option value="card">Credit Card</option>
+            <option value="cryptocoin">Cryptocurrency</option>
+            <option value="dcard">Debit Card</option>
+            <option value="other">Other</option>
+          </select>
+      </div>
+
+      <div>
+        <span>Date:</span><input type="date" name="date" id="transaction-date">
+      </div>
+
+      <div>
+        <span>Amount:</span> <input type="number" name="amount" placeholder="How much?" id="amount">
+      </div>
+
+      <div>
+        <span>Info: </span> <input type="text" name="info" id="name" placeholder="What did you spend on?">
+      </div>
+
+    </form>
+  </div>
+
+  <div id="button"><span>Add a new expense</span></div>
+
+  <table>
+    <tr>
+      <th id="type" class="center">Transaction</th>
+      <th>Name</th>
+      <th id="date">Date</th>
+      <th style="text-align: right" id="amount">Amount</th>
+    </tr>
+    <tr id="if-empty">
+      <td colspan="4"><span>Your expenses will apear here when added.</span></td>
+    </tr>
+
+  </table>
+</div>
